@@ -1,16 +1,21 @@
 import React, { Component } from "react";
 import "./App.css";
-// import { BrowserRouter, Route } from "react-router-dom";
-// import Navbar from "./components/Navbar";
-// import HomePage from "./components/HomePage";
-// import Products from "./components/Products";
-// import ProductDetails from "./components/ProductDetails";
+import { BrowserRouter, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import HomePage from "./components/HomePage";
+import Products from "./components/Products";
 
 class App extends Component {
   render() {
     return (
       <div>
-      hello
+      <BrowserRouter>
+      <div>
+        <Navbar />
+        <Route path="/" exact component={HomePage} />
+        <Route path="/products" exact component={Products} />
+      </div>
+      </BrowserRouter>
       </div>
     );
   }
@@ -19,11 +24,3 @@ class App extends Component {
 export default App;
 
 
-// <BrowserRouter>
-// <div>
-//   <Navbar />
-//   <Route path="/" exact component={HomePage} />
-//   <Route path="/products" exact component={Products} />
-//   <Route path="/products/:id" exact component={ProductDetails} />
-// </div>
-// </BrowserRouter>
