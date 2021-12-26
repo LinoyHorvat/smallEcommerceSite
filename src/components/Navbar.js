@@ -7,6 +7,7 @@ export default class Navbar extends Component {
       <div style={{ background: "grey" }}>
         <Link to="/"> Home </Link>
         <Link to="/products">Products</Link>
+        <Link to="/cart">Cart</Link>
       </div>
     );
   }
